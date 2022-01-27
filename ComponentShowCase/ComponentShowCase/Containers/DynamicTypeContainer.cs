@@ -22,10 +22,10 @@ namespace ComponentShowCase.Containers
         /// List of all property names
         /// </summary>
         /// <returns></returns>
-        public List<string> GetTypeProperties()
+        public List<object> GetTypeProperties()
         {
             var props = typeof(T).GetProperties();
-            List<string> propertyNames = new();
+            List<object> propertyNames = new();
             foreach (var item in props)
             {
                 propertyNames.Add(item.Name);

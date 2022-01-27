@@ -3,8 +3,8 @@
 @if (DynamictypeObject.Data is not null)
 {
     <table class="@TableStyle">
-        
-        <tr >
+
+        <tr>
             @foreach (var item in DynamictypeObject.GetTypeProperties())
             {
                 <th class="@OuterStyle">
@@ -20,13 +20,24 @@
 
                 @foreach (var item in DynamictypeObject.GetTypeProperties())
                 {
+                    var value = DynamictypeObject.GetPropertyValue(i, (string)item);
                     <td class="@InnerStyle">
-                        @this.DynamictypeObject.GetPropertyValue(i, item)
-                        </td>
+                        @if (DynamictypeObject.IsList(value))
+                        {
+                            @foreach (var listItem in (List<object>)value)
+                           {
+                               @listItem<br />
+                           }
+                        }
+                        else
+                        {
+                            @this.DynamictypeObject.GetPropertyValue(i, (string)item)
+                        }
+                    </td>
                 }
 
             </tr>
-        
+
         }
     </table>
 }
@@ -36,6 +47,7 @@ else
 }
 
 @code {
+
 
     [Parameter]
     public DynamicTypeContainer<TItem> DynamictypeObject { get; set; }

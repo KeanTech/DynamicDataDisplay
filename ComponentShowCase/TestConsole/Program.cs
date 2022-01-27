@@ -37,7 +37,7 @@ namespace TestConsole
                 foreach (var item in typeContainer.GetTypeProperties())
                 {
 
-                    var value = typeContainer.GetPropertyValue(i, item);
+                    var value = typeContainer.GetPropertyValue(i, (string)item);
                     var type = value.GetType().Name;
                     var assembly = value.GetType().BaseType;
                     if(typeContainer.IsList(value))
