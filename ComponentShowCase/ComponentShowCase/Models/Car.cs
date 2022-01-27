@@ -8,7 +8,7 @@ namespace ComponentShowCase.Models
         public string Model { get; set; }
         public float Price { get; set; }
 
-        public List<string> Features { get; set; }
+        public List<object> Features { get; set; }
 
         public Car()
         {
