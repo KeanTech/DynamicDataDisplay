@@ -1,5 +1,25 @@
-﻿<h3>ListDisplayComponent</h3>
+﻿@typeparam TItem
+
+<div class="KeanCard">
+
+    <ul>
+        @foreach (var item in @DataContainer.GetTypeProperties())
+       {
+        <li></li>
+       }
+    </ul>
+
+</div>
+
+
+
 
 @code {
+
+    [Parameter]
+    public DynamicTypeContainer<TItem> DataContainer { get; set; }        
+
+
+
 
 }

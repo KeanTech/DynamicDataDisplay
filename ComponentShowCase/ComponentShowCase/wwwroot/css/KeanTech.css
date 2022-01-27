@@ -13,17 +13,16 @@
     }
 
 .KeanCard {
-    
-    height:fit-content;
-    width:fit-content;
-    background-image: linear-gradient(black 20%, rgb(114, 31, 169) 80%);
-    text-align:center;
-    padding-right:10px;
-
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(67,5,159,1) 20%, rgba(11,52,231,1) 40%, rgba(11,52,231,1) 60%, rgba(67,5,159,1) 80%);
+    text-align: center;
+    padding: 30px 30px 30px 30px;
 }
 
 .innerTable {
-    background-color: rgb(14, 93, 114);
+    
+    background-color: #005ca4;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     border: 2px solid Black;
@@ -33,13 +32,13 @@
 }
 
 .outerTable {
-    background-color:rgb(9, 79, 139);
+    background-color: #007cdd;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    border:2px solid Black;
+    border: 2px solid Black;
     width: 10%;
-    color:papayawhip;
-    text-align:center;
+    color: papayawhip;
+    text-align: center;
 }
 
 .KeanTable {

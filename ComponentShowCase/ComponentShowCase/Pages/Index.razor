@@ -1,12 +1,19 @@
 ﻿@page "/"
-
+<div class="KeanCard">
 <TableDisplayComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer1"></TableDisplayComponent>
 <br />
 <TableDisplayComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer2"></TableDisplayComponent>
 <br />
 <TableDisplayComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer3"></TableDisplayComponent>
+</div>
+<br />
+
+<BackGroundComponent rgbValues="_colorController"></BackGroundComponent>
+
+
 
 @code{
+    private ColorController _colorController;
 
     private DynamicTypeContainer<User> _dynamicTypeContainer1;
     private DynamicTypeContainer<Car> _dynamicTypeContainer2;
@@ -14,6 +21,8 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        _colorController = new();
+
         _dynamicTypeContainer1 = new();
         _dynamicTypeContainer1.Data = new() 
         {
