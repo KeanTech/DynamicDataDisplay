@@ -1,11 +1,10 @@
 ﻿@page "/"
 
-<ListContainerComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer1"></ListContainerComponent>
+<TableDisplayComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer1"></TableDisplayComponent>
 <br />
-<ListContainerComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer2"></ListContainerComponent>
+<TableDisplayComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer2"></TableDisplayComponent>
 <br />
-<ListContainerComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer3"></ListContainerComponent>
-
+<TableDisplayComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer3"></TableDisplayComponent>
 
 @code{
 
@@ -42,13 +41,15 @@
             {
                 Id = 1,
                 Model = "BMW",
-                Price = 800000
+                Price = 800000,
+                Features = new() { "Drive", "Stop" }
             },
             new Car()
             {
                 Id = 1,
                 Model = "Audi",
-                Price = 955600
+                Price = 955600,
+                Features = new() { "Drive", "Stop", "Bounce" }
             }
         };
 

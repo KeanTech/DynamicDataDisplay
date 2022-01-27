@@ -10,10 +10,7 @@ namespace ComponentShowCase.Models
 
         public List<object> Features { get; set; }
 
-        public Car()
-        {
-            Features = new() { "Drive", "Stop" };
-        }
+       
     
     }
 }
