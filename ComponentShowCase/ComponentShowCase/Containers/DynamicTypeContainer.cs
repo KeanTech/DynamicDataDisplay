@@ -34,6 +34,11 @@ namespace ComponentShowCase.Containers
             return propertyNames;
         }
 
+        /// <summary>
+        /// Checks the object to see if its a list
+        /// </summary>
+        /// <param name="o"></param>
+        /// <returns></returns>
         public bool IsList(object o)
         {
             if (o == null) return false;
@@ -77,6 +82,7 @@ namespace ComponentShowCase.Containers
             if (_data.Contains(obj))
             {
                 _data.Remove(obj);
+                return;
             }
             throw new ArgumentException("Nothing to remove");
         }
