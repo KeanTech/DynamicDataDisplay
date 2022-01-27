@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDisplay", "DynamicDisplay\DynamicDisplay.csproj", "{25245087-6BD3-44BC-852A-74AA1C1C0F0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentShowCase", "ComponentShowCase\ComponentShowCase.csproj", "{348651F0-CB30-438A-90CE-D7A2FEE4734F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{25245087-6BD3-44BC-852A-74AA1C1C0F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25245087-6BD3-44BC-852A-74AA1C1C0F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25245087-6BD3-44BC-852A-74AA1C1C0F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25245087-6BD3-44BC-852A-74AA1C1C0F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348651F0-CB30-438A-90CE-D7A2FEE4734F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348651F0-CB30-438A-90CE-D7A2FEE4734F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348651F0-CB30-438A-90CE-D7A2FEE4734F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348651F0-CB30-438A-90CE-D7A2FEE4734F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {760977CC-336D-4968-B783-C85C42A5695A}
+		SolutionGuid = {F908DD38-EF75-4487-ADAB-683D7655F1E1}
 	EndGlobalSection
 EndGlobal

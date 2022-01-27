@@ -1,0 +1,73 @@
+﻿@page "/"
+
+<ListContainerComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer1"></ListContainerComponent>
+<br />
+<ListContainerComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer2"></ListContainerComponent>
+<br />
+<ListContainerComponent OuterStyle="outerTable" InnerStyle="innerTable" TableStyle="KeanTable" DynamictypeObject="_dynamicTypeContainer3"></ListContainerComponent>
+
+
+@code{
+
+    private DynamicTypeContainer<User> _dynamicTypeContainer1;
+    private DynamicTypeContainer<Car> _dynamicTypeContainer2;
+    private DynamicTypeContainer<Item> _dynamicTypeContainer3;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _dynamicTypeContainer1 = new();
+        _dynamicTypeContainer1.Data = new() 
+        {
+            new User()
+            {
+                Id = 1,
+                FirstName = "Kenneth",
+                LastName = "Andersen",
+
+            },
+            new User()
+            {
+
+                Id = 2,
+                FirstName = "Torben",
+                LastName = "Fredsen",
+
+            }
+        };
+
+        _dynamicTypeContainer2 = new();
+        _dynamicTypeContainer2.Data = new()
+        {
+            new Car()
+            {
+                Id = 1,
+                Model = "BMW",
+                Price = 800000
+            },
+            new Car()
+            {
+                Id = 1,
+                Model = "Audi",
+                Price = 955600
+            }
+        };
+
+        _dynamicTypeContainer3 = new();
+        _dynamicTypeContainer3.Data = new()
+        {
+            new Item()
+            {
+                Name = "Radio-D12",
+                Active = true,
+                CreatedAt = DateTime.Now
+            },
+            new Item()
+            {
+                Name = "Oven-1",
+                Active = true,
+                CreatedAt = DateTime.Now.AddDays(-10).AddHours(-6)
+            }
+        };
+
+    }
+}

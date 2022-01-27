@@ -1,0 +1,51 @@
+﻿@typeparam TItem;
+
+@if (DynamictypeObject.Data is not null)
+{
+    <table class="@TableStyle">
+        
+        <tr >
+            @foreach (var item in DynamictypeObject.GetTypeProperties())
+            {
+                <th class="@OuterStyle">
+                    @item
+                </th>
+            }
+        </tr>
+
+        @for (int i = 0; i < DynamictypeObject.Data.Count; i++)
+        {
+
+            <tr>
+
+                @foreach (var item in DynamictypeObject.GetTypeProperties())
+                {
+                    <td class="@InnerStyle">
+                        @this.DynamictypeObject.GetPropertyValue(i, item)
+                        </td>
+                }
+
+            </tr>
+        
+        }
+    </table>
+}
+else
+{
+    <p>Loading......</p>
+}
+
+@code {
+
+    [Parameter]
+    public DynamicTypeContainer<TItem> DynamictypeObject { get; set; }
+
+    [Parameter]
+    public string OuterStyle { get; set; }
+
+    [Parameter]
+    public string InnerStyle { get; set; }
+
+    [Parameter]
+    public string TableStyle { get; set; }
+}

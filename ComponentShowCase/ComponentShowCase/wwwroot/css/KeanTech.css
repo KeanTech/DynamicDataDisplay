@@ -1,0 +1,52 @@
+﻿.Keanbtn {
+    background-image: linear-gradient(black 20%, rgb(3, 86, 108) 80%);
+    height:fit-content;
+    width:fit-content;
+    color:rgb(178, 0, 255);
+    font-size:16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border:2px solid rgb(41, 104, 135);
+    
+}
+    .Keanbtn:hover {
+        background-image: linear-gradient(black 20%, rgb(11, 176, 220)80%);
+    }
+
+.KeanCard {
+    
+    height:fit-content;
+    width:fit-content;
+    background-image: linear-gradient(black 20%, rgb(114, 31, 169) 80%);
+    text-align:center;
+    padding-right:10px;
+
+}
+
+.innerTable {
+    background-color: rgb(14, 93, 114);
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border: 2px solid Black;
+    width: 10%;
+    color: papayawhip;
+    text-align: center;
+}
+
+.outerTable {
+    background-color:rgb(9, 79, 139);
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border:2px solid Black;
+    width: 10%;
+    color:papayawhip;
+    text-align:center;
+}
+
+.KeanTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+
