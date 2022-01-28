@@ -9,8 +9,5 @@ namespace ComponentShowCase.Models
         public float Price { get; set; }
 
         public List<object> Features { get; set; }
-
-       
-    
     }
 }
