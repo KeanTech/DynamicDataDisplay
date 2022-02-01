@@ -29,15 +29,15 @@ namespace TestConsole
                 }
             };
 
-            var properties = typeContainer.GetTypeProperties();
+            var properties = typeContainer.GetObjectProperties();
             
             for (int i = 0; i < typeContainer.Data.Count; i++)
             {
 
-                foreach (var item in typeContainer.GetTypeProperties())
+                foreach (var item in typeContainer.GetObjectProperties())
                 {
 
-                    var value = typeContainer.GetPropertyValue(i, (string)item);
+                    var value = typeContainer.GetObjectPropertyValue(i, (string)item);
                     var type = value.GetType().Name;
                     var assembly = value.GetType().BaseType;
                     if(typeContainer.IsList(value))

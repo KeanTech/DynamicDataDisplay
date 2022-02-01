@@ -11,6 +11,7 @@
         {
             _css += $"background: linear-gradient(rgb({rgbValues1}) 20%, rgb({rgbValues2}) 80%);";
         }
+
         public void AddRadialGradient(string rgbValues1, string rgbValues2)
         {
             _css += $"background: radial-gradient(rgb({rgbValues1}) 20%, rgb({rgbValues2}) 80%);";

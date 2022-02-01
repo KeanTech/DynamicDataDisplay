@@ -17,12 +17,28 @@ namespace ComponentShowCase.Containers
             _data = new();
         }
 
+
+        public int GetListCountOnData() 
+        {
+            int count = 0;
+            foreach (var item in GetObjectProperties())
+            {
+                var propertyValue = GetObjectPropertyValue(0, (string)item);
+                if (IsList(propertyValue))
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
         /// <summary>
         /// Returns a list of strings 
         /// List of all property names
         /// </summary>
         /// <returns></returns>
-        public List<object> GetTypeProperties()
+        public List<object> GetObjectProperties()
         {
             var props = typeof(T).GetProperties();
             List<object> propertyNames = new();
@@ -50,12 +66,12 @@ namespace ComponentShowCase.Containers
         /// <summary>
         /// dataIndex selects the the object in the Data List
         /// it also needs the property name
-        /// Use the GetTypeProperties to get property names
+        /// Use the GetObjectProperties to get property names
         /// </summary>
         /// <param name="dataIndex"></param>
         /// <param name="propertyName"></param>
         /// <returns></returns>
-        public object GetPropertyValue(int dataIndex, string propertyName)
+        public object GetObjectPropertyValue(int dataIndex, string propertyName)
         {
             // Gets the property value
             object objectValues = Data[dataIndex].GetType().GetProperty(propertyName).GetValue(Data[dataIndex]);

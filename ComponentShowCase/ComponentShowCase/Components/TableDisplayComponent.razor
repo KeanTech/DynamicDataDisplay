@@ -2,10 +2,12 @@
 
 @if (DynamictypeObject.Data is not null)
 {
+    <h2>@DynamictypeObject.GetListCountOnData()</h2>
+
     <table class="@TableStyle">
 
         <tr>
-            @foreach (var item in DynamictypeObject.GetTypeProperties())
+            @foreach (var item in DynamictypeObject.GetObjectProperties())
             {
                 <th class="@OuterStyle">
                     @item
@@ -18,9 +20,9 @@
 
             <tr>
 
-                @foreach (var item in DynamictypeObject.GetTypeProperties())
+                @foreach (var item in DynamictypeObject.GetObjectProperties())
                 {
-                    var value = DynamictypeObject.GetPropertyValue(i, (string)item);
+                    var value = DynamictypeObject.GetObjectPropertyValue(i, (string)item);
                     <td class="@InnerStyle">
                         @if (DynamictypeObject.IsList(value))
                         {
@@ -31,7 +33,7 @@
                         }
                         else
                         {
-                            @this.DynamictypeObject.GetPropertyValue(i, (string)item)
+                            @this.DynamictypeObject.GetObjectPropertyValue(i, (string)item)
                         }
                     </td>
                 }

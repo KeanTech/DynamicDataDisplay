@@ -1,25 +1,46 @@
 ﻿@typeparam TItem
 
-<div class="KeanCard">
+@if (DataContainer is not null)
+{
 
-    <ul>
-        @foreach (var item in @DataContainer.GetTypeProperties())
-       {
-        <li></li>
-       }
-    </ul>
+    <div class="KeanListbg" style="column-count:@DataContainer.GetListCountOnData();">
+        @for (var i = 0; i < DataContainer.Data.Count; i++)
+        {
 
-</div>
+            @foreach (var item in @DataContainer.GetObjectProperties())
+            {
+                var value = DataContainer.GetObjectPropertyValue(i, (string)item);
+                @if (DataContainer.IsList(value))
+                {
 
+                    <table class="">
+                        <tr>
+                            <th style="color:papayawhip;">@item</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul class="KeanList">
+                                    @foreach (var objectValue in (List<object>)value)
+                                    {
+                                        <li>@objectValue</li>
 
+                                    }
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
 
+                    <br />
+                }
+            }
+        }
+
+    </div>
+}
 
 @code {
 
     [Parameter]
-    public DynamicTypeContainer<TItem> DataContainer { get; set; }        
-
-
-
+    public DynamicTypeContainer<TItem> DataContainer { get; set; }
 
 }
