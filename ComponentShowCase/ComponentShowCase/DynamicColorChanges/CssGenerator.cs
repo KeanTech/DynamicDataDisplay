@@ -4,12 +4,12 @@
     {
         private string _css;
 
-        public enum Borders { solid, dotted }
+        public enum Borders { solid, dotted, }
 
         public string GetCss { get => _css; }
         public void AddLinearGradient(string rgbValues1, string rgbValues2)
         {
-            _css += $"background: linear-gradient(rgb({rgbValues1}) 20%, rgb({rgbValues2}) 80%);";
+            _css += $"background: linear-gradient(180deg, rgba({rgbValues1}) 20%, rgba({rgbValues2}) 40%, rgba({rgbValues2}) 60%, rgba({rgbValues1}) 80%);";
         }
 
         public void AddRadialGradient(string rgbValues1, string rgbValues2)

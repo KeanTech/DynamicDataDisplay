@@ -1,39 +1,39 @@
 ﻿.Keanbtn {
-    background-image: linear-gradient(black 20%, rgb(3, 86, 108) 80%);
+    background-image: linear-gradient(black 10%, rgb(3, 86, 108) 80%);
     height:fit-content;
     width:fit-content;
-    color:rgb(178, 0, 255);
+    color:rgb(72, 158, 192);
     font-size:16px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border:2px solid rgb(41, 104, 135);
     
 }
-    .Keanbtn:hover {
+.Keanbtn:hover {
         background-image: linear-gradient(black 20%, rgb(11, 176, 220)80%);
-    }
+}
 
 .KeanCard {
-    height: 100%;
-    width: 100%;
+    height: fit-content;
+    width: fit-content;
     background-image: linear-gradient(180deg, rgba(67,5,159,1) 20%, rgba(11,52,231,1) 40%, rgba(11,52,231,1) 60%, rgba(67,5,159,1) 80%);
     text-align: center;
     padding: 30px 30px 30px 30px;
     border: 3px solid black;
-    border-collapse:collapse;
+    border-collapse: collapse;
 }
 
 .KeanListbg {
     height: fit-content;
     width: fit-content;
     background-color: #007cdd;
-    text-align: center;
     border:2px solid black;
 }
 
 .KeanList {
+    text-align: center;
     background-color: #005ca4;
-    list-style: decimal;
-    list-style-position: outside;
+    list-style: none;
+    list-style-position: inside;
     width: 350px;
     height: fit-content;
     color: papayawhip;
@@ -63,8 +63,5 @@
 .KeanTable {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 800px;
 }
-
-
-

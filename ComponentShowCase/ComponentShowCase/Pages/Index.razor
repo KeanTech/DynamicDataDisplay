@@ -11,6 +11,13 @@
 
 </div>
 
+<br />
+<div style="@_colorController.GetLinearGradient("67,5,159", "11,52,231") padding:10px 10px 10px 10px; width:fit-content;">
+    <ListDisplayComponent DataContainer="_dynamicTypeContainer"></ListDisplayComponent>
+</div>
+<br />
+<button class="Keanbtn" type="submit" >Click Here</button>
+
 @code {
 
     private ColorController _colorController;
@@ -19,11 +26,11 @@
     private DynamicTypeContainer<User> _dynamicTypeContainer1;
     private DynamicTypeContainer<Car> _dynamicTypeContainer2;
     private DynamicTypeContainer<Item> _dynamicTypeContainer3;
-    
+
     protected override void OnInitialized()
     {
         base.OnInitialized();
-
+        
         _dynamicTypeContainer = new();
         _dynamicTypeContainer.Data = new()
             {
@@ -45,6 +52,13 @@
                         1213.55f,
                         13151.23f,
                         1561.12f
+                    },
+                    Names = new()
+                    {
+                        "Arne",
+                        "Bjørn",
+                        "Morten",
+                        "Jørgen"
                     }
                 }
             };
@@ -107,12 +121,3 @@
             };
     }
 }
-
-<br />
-<div class="KeanCard">
-    <ListDisplayComponent DataContainer="_dynamicTypeContainer"></ListDisplayComponent>
-</div>
-<br />
-
-<BackGroundComponent rgbValues="_colorController"></BackGroundComponent>
-
