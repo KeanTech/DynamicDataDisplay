@@ -17,7 +17,6 @@ namespace ComponentShowCase.Containers
             _data = new();
         }
 
-
         public int GetListCountOnData() 
         {
             int count = 0;

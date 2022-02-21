@@ -6,24 +6,23 @@
     <div class="KeanListbg" style="column-count:@DataContainer.GetListCountOnData();">
         @for (var i = 0; i < DataContainer.Data.Count; i++)
         {
-
-            @foreach (var item in @DataContainer.GetObjectProperties())
+            //Gets a list of objects aka property names
+            @foreach (var propertyName in @DataContainer.GetObjectProperties())
             {
-                var value = DataContainer.GetObjectPropertyValue(i, (string)item);
-                @if (DataContainer.IsList(value))
+                // Gets the object aka property value in the data list on the selected index 
+                var propertyValue = DataContainer.GetObjectPropertyValue(i, (string)propertyName);
+                @if (DataContainer.IsList(propertyValue))
                 {
-
                     <table class="">
                         <tr>
-                            <th style="color:papayawhip;">@item</th>
+                            <th style="color:papayawhip;">@propertyName</th>
                         </tr>
                         <tr>
                             <td>
                                 <ul class="KeanList">
-                                    @foreach (var objectValue in (List<object>)value)
+                                    @foreach (var objectValue in (List<object>)propertyValue)
                                     {
                                         <li>@objectValue</li>
-
                                     }
                                 </ul>
                             </td>
